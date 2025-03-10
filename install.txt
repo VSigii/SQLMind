@@ -1,0 +1,1 @@
+pip install -q python-dotenv streamlit langchain_groq langchain_community psycopg2

@@ -17,7 +17,7 @@ models = ["gemma2-9b-it","mixtral-8x7b-32768","llama-3.3-70b-versatile"]
 
 # Initialize the database, here it is postgres
 def init_database(user: str, password: str, host: str, port: str, database: str) -> SQLDatabase:
-    db_uri = f"postgresql://{user}:{password}@{host}:{port}/{database}"
+    db_uri = f"postgresql://{user}:{password}@{host}.{port}/{database}"
     return SQLDatabase.from_uri(db_uri)
 
 # create sql query generator
@@ -110,11 +110,11 @@ st.title("Chat with Postgres")
 with st.sidebar:
     st.subheader("Settings")
     st.write("Connect with the database and converse")
-    st.text_input("Host",value="localhost" ,key="Host")
-    st.text_input("User",value="postgres" ,key="User")
+    st.text_input("Host",value="dpg-cv6thua3esus73e9lpn0-a" ,key="Host")
+    st.text_input("User",value="sigii" ,key="User")
     st.text_input("Password",type="password",value="sigdel" ,key="Password")
-    st.text_input("Port",value="8080" ,key="Port")
-    st.text_input("Database",value="db_phone" ,key="Database")
+    st.text_input("Port",value="singapore-postgres.render.com" ,key="Port")
+    st.text_input("Database",value="dbdamdum" ,key="Database")
 
     if st.button("Connect"):
         with st.spinner("Connecting to the databse..."):

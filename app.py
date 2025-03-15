@@ -113,7 +113,7 @@ with st.sidebar:
     st.write("Connect with the database and converse")
     st.text_input("Host",value="dpg-cv6thua3esus73e9lpn0-a" ,key="Host")
     st.text_input("User",value="sigii" ,key="User")
-    st.text_input("Password",type="password",value="sigdel" ,key="Password")
+    st.text_input("Password",type="password",value="VwZgJfG6cPjFbqLO4ojysHpdg8DUBsRW" ,key="Password")
     st.text_input("Port",value="singapore-postgres.render.com" ,key="Port")
     st.text_input("Database",value="dbdamdum" ,key="Database")
 

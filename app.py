@@ -81,7 +81,7 @@ def get_response(user_query:str, db:SQLDatabase, chat_history:list):
         SQL Response: {response}"""
     
     prompt = ChatPromptTemplate.from_template(template)
-    llm = llm = ChatGroq(api_key = groq_api_key, model_name= models[1])
+    llm = llm = ChatGroq(api_key = groq_api_key, model_name= models[0])
     chain = (
         RunnablePassthrough.assign(query=sql_chain).assign(
             schema = lambda _: db.get_table_info(),

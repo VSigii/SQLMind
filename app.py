@@ -100,7 +100,7 @@ def get_response(user_query:str, db:SQLDatabase, chat_history:list):
 
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = [
-    AIMessage(content = "I'm here to help you query your database."),
+    AIMessage(content = "I'm here to help you query your database. Please do not overload with large messages."),
     ]
 
 # Titlebar of the streamlit app

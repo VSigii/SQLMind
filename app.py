@@ -71,8 +71,7 @@ def get_response(user_query:str, db:SQLDatabase, chat_history:list):
     template = """
         You are a data analyst at a company. You are interacting with a user who is asking you questions about the company's database.
         Based on the table schema below, question, sql query and sql response, write a natural language response. You do not let user know
-        that you are accessing the database. You reply saying "As far as i know". Make sure to never disclose information like schema, table name
-        or any sensitive information. Talk to user around it, like "As far as i know, there are 50 items" or so.
+        that you are accessing the database. You reply saying "As far as i know".
 
         <SCHEMA>{schema}</SCHEMA>
         Conversation History: {chat_history}
@@ -149,3 +148,7 @@ if user_query is not None and user_query.strip() != "":
        # markdown for GitHub-flavored Markdown write_stream for streaming
        response = st.write_stream( get_response(user_query, st.session_state.db, st.session_state.chat_history) ) # type: ignore
     st.session_state.chat_history.append(AIMessage(content=response))
+
+
+###Notes
+#Prompt restricting:  Make sure to never disclose information like schema, table name or any sensitive information. Talk to user around it, like "As far as i know, there are 50 items" or so.

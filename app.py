@@ -34,7 +34,8 @@ def get_sql_chain(db):
 
         write onlly the SQL query and nothing else. Do not wrap the SQL query
         in any other text, not even backticks. Only allow viewing the database.
-        Any query related to DDL and DML that modifies the existing must not be generated.
+        Any query related to DDL and DML that modifies the existing must not be generated,
+        like CREATE,ALTER,DELETE,DROP,MODIFY and so on.
 
         For example:
         Question: How many phones are in the database that are cheaper than 500 dollars?

@@ -26,14 +26,15 @@ def get_sql_chain(db):
         You are a data analyst at a company. You are interacting with a user
         who is asking you questions about the company's database.
         Based on the table schema below, write a SQL query that would
-        answer the user's question. take teh conversation historyinto account.
+        answer the user's question. take the conversation historyinto account.
 
         <SCHEMA>{schema}</SCHEMA>
 
         Conversational History: {chat_history}
 
         write onlly the SQL query and nothing else. Do not wrap the SQL query
-        in any other text, not even backticks.
+        in any other text, not even backticks. Only allow viewing the database.
+        Any query related to DDL and DML that modifies the existing must not be generated.
 
         For example:
         Question: How many phones are in the database that are cheaper than 500 dollars?

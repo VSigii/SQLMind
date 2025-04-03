@@ -103,7 +103,7 @@ def get_response(user_query:str, db:SQLDatabase, chat_history:list):
 
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = [
-    AIMessage(content = "I'm here to help you query your database. Please do not overload with large messages."),
+    AIMessage(content = "I'm here to help you query your database. I query a database that contains various specs of the table containing phones."),
     ]
 
 # Titlebar of the streamlit app
@@ -116,7 +116,8 @@ with st.sidebar:
     st.write("Connect with the database and converse")
     st.text_input("Host",value="dpg-cv6thua3esus73e9lpn0-a" ,key="Host")
     st.text_input("User",value="sigii" ,key="User")
-    st.text_input("Password",type="password",value="VwZgJfG6cPjFbqLO4ojysHpdg8DUBsRW" ,key="Password")
+    # st.text_input("Password",type="password",value="VwZgJfG6cPjFbqLO4ojysHpdg8DUBsRW" ,key="Password")
+    st.session_state.Password = "VwZgJfG6cPjFbqLO4ojysHpdg8DUBsRW"
     st.text_input("Port",value="singapore-postgres.render.com" ,key="Port")
     st.text_input("Database",value="dbdamdum" ,key="Database")
 

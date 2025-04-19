@@ -114,12 +114,12 @@ st.title("Chat with Postgres of Render")
 with st.sidebar:
     st.subheader("Settings")
     st.write("Connect with the database and converse")
-    st.text_input("Host",value="dpg-cv6thua3esus73e9lpn0-a" ,key="Host")
-    st.text_input("User",value="sigii" ,key="User")
+    st.text_input("Host",value="pgsql-damdum.j.aivencloud.com" ,key="Host")
+    st.text_input("User",value="avnadmin" ,key="User")
     # st.text_input("Password",type="password",value="VwZgJfG6cPjFbqLO4ojysHpdg8DUBsRW" ,key="Password")
-    st.session_state.Password = "VwZgJfG6cPjFbqLO4ojysHpdg8DUBsRW"
-    st.text_input("Port",value="singapore-postgres.render.com" ,key="Port")
-    st.text_input("Database",value="dbdamdum" ,key="Database")
+    st.session_state.Password = "AVNS_qcJyjhUARXNt2m179H3"
+    st.text_input("Port",value="23837" ,key="Port")
+    st.text_input("Database",value="db_damdum" ,key="Database")
 
     if st.button("Connect"):
         with st.spinner("Connecting to the databse..."):

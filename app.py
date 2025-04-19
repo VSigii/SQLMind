@@ -17,7 +17,7 @@ models = ["gemma2-9b-it","mixtral-8x7b-32768","llama-3.3-70b-versatile"]
 
 # Initialize the database, here it is postgres
 def init_database(user: str, password: str, host: str, port: str, database: str) -> SQLDatabase:
-    db_uri = f"postgresql://{user}:{password}@{host}.{port}/{database}"
+    db_uri = f"postgresql://{user}:{password}@{host}:{port}/{database}"
     return SQLDatabase.from_uri(db_uri)
 
 # create sql query generator

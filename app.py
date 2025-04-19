@@ -107,7 +107,7 @@ if "chat_history" not in st.session_state:
     ]
 
 # Titlebar of the streamlit app
-st.set_page_config( page_title="Chat with Render SQL", page_icon=":speech_balloon: ")
+st.set_page_config( page_title="Chat with Aiven PostgreSQL", page_icon=":speech_balloon: ")
 st.title("Chat with Postgres of Render")
 
 # Connection with the database
